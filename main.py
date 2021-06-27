@@ -58,6 +58,8 @@ def checkKey(outputFile):
             pressKey(outputFile, " ")
         elif key == "enter":
             pressKey(outputFile, "\n")
+        elif key == "tab":
+            pressKey(outputFile, "\t")
         else:
             pressKey(outputFile, key)
         pressed = False

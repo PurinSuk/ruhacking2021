@@ -22,8 +22,9 @@ allSongs.addSong(sheets.marysLamb)
 # LIMITATION: a sound is played wherever we type (not just terminal)
 def pressKey(outputFile, key):
     global numChars, currentNoteIndex, currentSongIndex
-    #outputFile.write(key)
-    #numChars += 1
+    outputFile.write(key)
+    print(key, flush=True, end="")
+    numChars += 1
     # play new sound
     playsound(os.path.abspath("music/notes/" + allSongs.getCurrentNote(currentSongIndex, currentNoteIndex) + ".mp3"))
     if currentNoteIndex == allSongs.currentSongLength(songIndex=currentSongIndex) - 1:
@@ -37,6 +38,9 @@ def pressBackSpace(outputFile):
     if numChars > 0:
         outputFile.truncate(numChars - 1)
         numChars -= 1
+        print("\b", flush=True, end="")
+        print(" ", flush=True, end="")
+        print("\b", flush=True, end="")
     playsound(os.path.abspath("music/beep.mp3"))
 
 # LIMITATION: typing speed cannot be too fast or the key is not correctly detected

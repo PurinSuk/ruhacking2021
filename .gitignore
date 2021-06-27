@@ -1,3 +1,7 @@
 # ignore virtual environment
 venv
 .idea/
+
+# ignore every text file (except requirements.txt)
+*.txt
+!requirements.txt

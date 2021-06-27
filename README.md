@@ -1,4 +1,4 @@
-# Mechanical Keyboard
+# FunType
 The GitHub repository for R U Hacking 2021? hackathon.
 
 The purpose is to make boring typing fun by playing a piano note every time a keyboard key is pressed.
